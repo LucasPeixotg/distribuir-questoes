@@ -6,20 +6,20 @@ def get_positive_int_input(question):
         
         try:
             if int(answer) <= 0:
-                print("Value must be positive.")
+                print("O valor deve ser positivo.")
             else:
                 return int(answer)
         except ValueError:
-            print("Value must be an integer.")
+            print("O valor deve ser inteiro.")
 
-people_quant = get_positive_int_input("How many people?")
+people_quant = get_positive_int_input("Quantas pessoas? ")
 
-quant = get_positive_int_input("How many questions?")
+quant = get_positive_int_input("Quantas questões? ")
 
 
 people = []
 for i in range(people_quant):
-    name = input(f"Name of {i+1}° person: ")
+    name = input(f"Nome da {i+1}° pessoa: ")
     people.append({
         "name": name,
         "total": 0
